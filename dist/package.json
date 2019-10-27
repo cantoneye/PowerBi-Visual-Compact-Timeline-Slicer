@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "author": {"name":"Ken Liang","email":"suikun.liang@gmail.com"},
+    "resources": [
+        {
+            "resourceId": "rId0",
+            "sourceType": 5,
+            "file": "resources/timeLineA475066C449F41D69D6F58C4510CE5D4.pbiviz.json"
+        }
+    ],
+    "visual": {"name":"timeLineSlicer","displayName":"Compact Time Line Slicer","guid":"timeLineA475066C449F41D69D6F58C4510CE5D4","visualClassName":"Visual","version":"1.0.0","description":"Compact version of Time Line Slicer","supportUrl":"www.bagtrans.com.au","gitHubUrl":"https://github.com/cantoneye/PowerBi-Visual-Compact-Timeline-Slicer"},
+    "metadata": {
+        "pbivizjson": {
+            "resourceId": "rId0"
+        }
+    }  
+}
