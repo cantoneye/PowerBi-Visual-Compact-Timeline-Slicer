@@ -3,7 +3,7 @@
     "supportsSynchronizingFilterState": true,
     "dataRoles": [
         {
-            "displayName": "Category Data",
+            "displayName": "Period Data",
             "name": "category",
             "kind": "Grouping"
         }
