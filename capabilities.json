@@ -1,0 +1,102 @@
+{
+    "supportsHighlight": true,
+    "supportsSynchronizingFilterState": true,
+    "dataRoles": [
+        {
+            "displayName": "Category Data",
+            "name": "category",
+            "kind": "Grouping"
+        }
+    ],
+    "objects": {
+        "general": {
+            "displayName": "General",
+            "properties": {
+                "filter": {
+                    "displayName": "filter",
+                    "type": {
+                        "filter": true
+                    }
+                }
+            }
+        },
+        "dataPoint": {
+            "displayName": "Visual formatting",
+            "properties": {
+                "layout": {
+                    "displayName": "Layout",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "0",
+                                "displayName": "Horizontal"
+                            },
+                            {
+                                "value": "1",
+                                "displayName": "Vertical"
+                            }
+                        ]
+                    }
+                },
+                "fill": {
+                    "displayName": "Default colour",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "dateFormat": {
+                    "displayName": "Date Format",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "%b %y",
+                                "displayName": "Month"
+                            },
+                            {
+                                "value": "%d/%m/%y",
+                                "displayName": "UK Date"
+                            },
+                            {
+                                "value": "%m/%d/%y",
+                                "displayName": "US Date"
+                            },
+                            {
+                                "value": "%y/%m/%d",
+                                "displayName": "JP Date"
+                            }
+                        ]
+                    }
+                },
+                 "fontSize": {
+                    "displayName": "Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                { "category": { "max": 1 } }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                }
+            }
+        }
+    ]
+}
