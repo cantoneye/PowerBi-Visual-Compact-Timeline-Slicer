@@ -37,7 +37,7 @@ export class dataPointSettings {
   // Default color
   public defaultColor: string = "";
   // Layout
-  public layout: string = "0";
+  public layout: string = "1";
   // Fill 
   public fill: string = "steelblue";
   // Date Format

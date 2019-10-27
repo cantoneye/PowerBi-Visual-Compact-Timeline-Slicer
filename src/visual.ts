@@ -65,7 +65,7 @@ export class Visual implements IVisual {
     private xAxisGroup: d3.Selection<SVGElement, {}, HTMLElement, any>;
     private yAxisGroup: d3.Selection<SVGElement, {}, HTMLElement, any>;
     private selectionManager: ISelectionManager;  // allows us to tell Power Bi that the user has selected sth on this visual you may want to do sth about it
-    private margin = { left:35, right:35, top:35, bottom:35 };
+    private margin = { left:35, right:35, top:30, bottom:30 };
     private selected = new Array();
     private lastSelectedId: number;
     private counter: number;
@@ -180,7 +180,7 @@ export class Visual implements IVisual {
             .append("text")
             .classed("itemTxt", true)
             .attr("x", d => xScale(d.category))
-            .attr("y", height - 55)
+            .attr("y", height - 45)
             .attr("font-size", this.settings.dataPoint.fontSize)
             .attr("text-anchor", "middle")
             .style("fill-opacity",  d => new Date(d.category).getTime() == new Date(StartDate).getTime() || new Date(d.category).getTime() == new Date(EndDate).getTime()  ? 1 : 0)
@@ -190,7 +190,7 @@ export class Visual implements IVisual {
             .append("text")
             .classed("float", true)
             .attr("x", d => xScale(d.category))
-            .attr("y", height - 55)
+            .attr("y", height - 45)
             .attr("font-size", this.settings.dataPoint.fontSize)
             .attr("text-anchor", "middle")
             .style("fill-opacity", 0)
@@ -212,7 +212,7 @@ export class Visual implements IVisual {
 
         // Don't combine the attribute with the append, it would lose the ability to resize    
         itemTxt.attr("x", d => xScale(d.category))
-            .attr("y", height - 55)
+            .attr("y", height - 45)
             .attr("font-size", this.settings.dataPoint.fontSize)
             .text(d => format(d.category));
 
@@ -224,7 +224,7 @@ export class Visual implements IVisual {
             
 
         floatTxt.attr("x", d => xScale(d.category))
-            .attr("y", height - 55)
+            .attr("y", height - 45)
             .attr("font-size", this.settings.dataPoint.fontSize)
             .text(d => format(d.category));
 
