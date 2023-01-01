@@ -17,7 +17,7 @@
     "powerbi-visuals-utils-dataviewutils": "^2.2.1"
   },
   "devDependencies": {
-    "ts-loader": "6.0.4",
+    "ts-loader": "9.4.2",
     "typescript": "3.5.3"
   }
 }
